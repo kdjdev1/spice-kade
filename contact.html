@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Sri Lanka Spice Co.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            spice: {
+              50: '#fef6ed',
+              100: '#fbe8d3',
+              200: '#f5c69f',
+              300: '#f1a26d',
+              400: '#e8813d',
+              500: '#cc5f2a',
+              600: '#a8441f',
+              700: '#7f331a',
+              800: '#5f2915',
+              900: '#4c2313'
+            }
+          },
+          fontFamily: {
+            serif: ['Lora', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            spice: '0 24px 70px rgba(37,24,12,0.16)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-[#f8eddf] text-slate-900 antialiased">
+  <div class="min-h-screen flex flex-col">
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+      <div class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+        <a href="index.html" class="font-serif text-xl tracking-[0.24em] uppercase text-slate-900">Sri Lanka Spice Co.</a>
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+          <a href="index.html" class="hover:text-spice-700">Home</a>
+          <a href="spices.html" class="text-slate-900">Our Spices</a>
+          <a href="contact.html" class="hover:text-spice-700">Contact</a>
+        </nav>        <button id="cartIcon" class="relative">
+          <svg class="w-6 h-6 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
+          <span id="cartBadge" class="absolute -top-2 -right-2 bg-spice-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+        </button>      </div>
+    </header>
+
+    <main class="flex-1">
+      <section class="relative overflow-hidden">
+        <div class="absolute inset-0">
+          <img src="images/AdobeStock_191057762.jpeg" alt="Spice display" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-b from-[#f8eddf]/80 via-[#f8eddf]/95 to-[#f8eddf]"></div>
+        </div>
+        <div class="relative mx-auto max-w-7xl px-6 py-24 md:py-28 lg:py-32">
+          <div class="max-w-3xl">
+            <p class="text-sm font-semibold uppercase tracking-[0.32em] text-spice-600">Wholesale & Retail</p>
+            <h1 class="mt-6 text-4xl font-serif tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">Contact us for fresh stock and bulk orders.</h1>
+            <p class="mt-3 text-lg font-semibold text-spice-600">Sri Lankan hot & spicy</p>
+            <p class="mt-6 text-base leading-8 text-slate-700 sm:text-lg">Send a message, request a bulk quote, or start a WhatsApp conversation with our local spice team.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-6 py-20">
+        <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+          <div class="rounded-[2rem] bg-white p-8 shadow-spice">
+            <h2 class="text-3xl font-serif tracking-tight text-slate-950">Quick inquiry</h2>
+            <form id="contactForm" novalidate class="mt-8 grid gap-6">
+              <div class="grid gap-2">
+                <label for="name" class="text-sm font-semibold text-slate-700">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required class="rounded-3xl border border-slate-200 bg-[#fbf7f2] px-5 py-4 text-sm text-slate-900 outline-none focus:border-spice-500 focus:ring-2 focus:ring-spice-100" />
+                <span class="text-xs text-red-600" id="nameError"></span>
+              </div>
+              <div class="grid gap-2">
+                <label for="phone" class="text-sm font-semibold text-slate-700">Contact Number</label>
+                <input id="phone" name="phone" type="tel" placeholder="07xxxxxxxx" pattern="[0-9]{10}" required class="rounded-3xl border border-slate-200 bg-[#fbf7f2] px-5 py-4 text-sm text-slate-900 outline-none focus:border-spice-500 focus:ring-2 focus:ring-spice-100" />
+                <span class="text-xs text-red-600" id="phoneError"></span>
+              </div>
+              <div class="grid gap-2">
+                <label for="inquiry" class="text-sm font-semibold text-slate-700">Inquiry Type</label>
+                <select id="inquiry" name="inquiry" required class="rounded-3xl border border-slate-200 bg-[#fbf7f2] px-5 py-4 text-sm text-slate-900 outline-none focus:border-spice-500 focus:ring-2 focus:ring-spice-100">
+                  <option value="">Select...</option>
+                  <option value="Retail">Retail</option>
+                  <option value="Wholesale">Wholesale</option>
+                </select>
+                <span class="text-xs text-red-600" id="inquiryError"></span>
+              </div>
+              <div class="grid gap-2">
+                <label for="message" class="text-sm font-semibold text-slate-700">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us your order or questions" required class="rounded-3xl border border-slate-200 bg-[#fbf7f2] px-5 py-4 text-sm text-slate-900 outline-none focus:border-spice-500 focus:ring-2 focus:ring-spice-100"></textarea>
+                <span class="text-xs text-red-600" id="messageError"></span>
+              </div>
+              <button type="submit" class="rounded-full bg-spice-600 px-6 py-4 text-sm font-semibold text-white shadow-spice hover:bg-spice-700 transition">Send Inquiry</button>
+              <p class="text-sm text-slate-600">Your details stay private. We reply within one business day.</p>
+            </form>
+          </div>
+
+          <div class="space-y-8">
+            <div class="rounded-[2rem] overflow-hidden shadow-spice">
+              <img src="images/stock-photo-asian-seasoning-spices-theme-225001267.jpg" alt="Sri Lankan spices in a bowl" class="h-96 w-full object-cover" />
+            </div>
+            <div class="rounded-[2rem] bg-white p-8 shadow-spice">
+              <h3 class="text-2xl font-semibold text-slate-950">Distribution Center</h3>
+              <p class="mt-4 text-sm leading-7 text-slate-600">Colombo, Sri Lanka</p>
+              <p class="mt-3 text-sm leading-7 text-slate-600">Local delivery and wholesale dispatch across the island.</p>
+              <a href="https://wa.me/94770000000" target="_blank" rel="noreferrer" class="mt-6 inline-flex items-center justify-center rounded-full border border-spice-600 bg-spice-50 px-6 py-3 text-sm font-semibold text-spice-700 hover:bg-spice-100 transition">WhatsApp Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200 bg-white/80">
+      <div class="mx-auto max-w-7xl px-6 py-6 text-center text-sm text-slate-600">© 2026 Sri Lanka Spice Co. | Crafted with local pride</div>
+    </footer>
+
+    <nav class="sticky bottom-0 z-40 bg-white/95 border-t border-slate-200 md:hidden">
+      <div class="mx-auto max-w-7xl px-6 grid grid-cols-3">
+        <a href="index.html" class="border-r border-slate-200 py-3 text-center text-sm font-semibold text-slate-600">Home</a>
+        <a href="spices.html" class="border-r border-slate-200 py-3 text-center text-sm font-semibold text-slate-600">Shop</a>
+        <a href="contact.html" class="py-3 text-center text-sm font-semibold text-spice-700">Contact</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="hidden fixed inset-0 bg-black/40 z-50 flex items-end md:items-center md:justify-end">
+    <div class="w-full md:w-96 bg-white rounded-t-[2rem] md:rounded-[2rem] shadow-2xl max-h-96 flex flex-col">
+      <div class="flex items-center justify-between p-6 border-b border-slate-200">
+        <h2 class="text-2xl font-serif font-semibold text-slate-950">Your Cart</h2>
+        <button id="closeCart" class="text-slate-400 hover:text-slate-600 text-2xl">✕</button>
+      </div>
+      <div id="cartItems" class="flex-1 overflow-y-auto p-6">
+        <p class="text-center text-slate-500 py-8">Your cart is empty</p>
+      </div>
+      <div class="border-t border-slate-200 p-6">
+        <p id="cartTotal" class="text-lg font-semibold text-slate-950 mb-4">Total: LKR 0</p>
+        <button class="w-full bg-spice-600 text-white font-semibold py-3 rounded-full hover:bg-spice-700 transition">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
