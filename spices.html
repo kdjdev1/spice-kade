@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Spices - Sri Lanka Spice Co.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            spice: {
+              50: '#fef6ed',
+              100: '#fbe8d3',
+              200: '#f5c69f',
+              300: '#f1a26d',
+              400: '#e8813d',
+              500: '#cc5f2a',
+              600: '#a8441f',
+              700: '#7f331a',
+              800: '#5f2915',
+              900: '#4c2313'
+            }
+          },
+          fontFamily: {
+            serif: ['Lora', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            spice: '0 24px 70px rgba(37,24,12,0.16)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-[#f8eddf] text-slate-900 antialiased">
+  <div class="min-h-screen flex flex-col">
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+      <div class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+        <a href="index.html" class="font-serif text-xl tracking-[0.24em] uppercase text-slate-900">Sri Lanka Spice Co.</a>
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+          <a href="index.html" class="hover:text-spice-700">Home</a>
+          <a href="spices.html" class="text-slate-900">Our Spices</a>
+          <a href="contact.html" class="hover:text-spice-700">Contact</a>
+        </nav>
+        <button id="cartIcon" class="relative">
+          <svg class="w-6 h-6 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
+          <span id="cartBadge" class="absolute -top-2 -right-2 bg-spice-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <section class="relative overflow-hidden">
+        <div class="absolute inset-0">
+          <img src="images/stock-photo-asian-seasoning-spices-theme-225001267.jpg" alt="Spice jars and herbs" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-b from-[#f8eddf]/80 via-[#f8eddf]/95 to-[#f8eddf]"></div>
+        </div>
+        <div class="relative mx-auto max-w-7xl px-6 py-24 md:py-28 lg:py-32">
+          <div class="max-w-3xl">
+            <p class="text-sm font-semibold uppercase tracking-[0.32em] text-spice-600">Explore the range</p>
+            <h1 class="mt-6 text-4xl font-serif tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">Handcrafted spice packets for every kitchen.</h1>
+            <p class="mt-3 text-lg font-semibold text-spice-600">Sri Lankan hot & spicy</p>
+            <p class="mt-6 text-base leading-8 text-slate-700 sm:text-lg">Choose premium turmeric, chili or pepper in easily portioned packs made for local Sri Lankan cooks and wholesale partners.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-6 py-20">
+        <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+          <div class="space-y-6">
+            <p class="text-sm font-semibold uppercase tracking-[0.32em] text-spice-600">Trilingual labels</p>
+            <h2 class="text-3xl font-serif tracking-tight text-slate-950 sm:text-4xl">Spice names in Sinhala, English, and Tamil.</h2>
+            <p class="text-base leading-8 text-slate-700">A premium product experience with names that feel familiar to every Sri Lankan family.</p>
+          </div>
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div class="rounded-[2rem] bg-white p-6 shadow-spice">
+              <p class="text-xs font-semibold uppercase tracking-[0.32em] text-spice-600">කහ කුඩු · Turmeric · மஞ்சள்</p>
+              <h3 class="mt-4 text-xl font-semibold text-slate-950">Kaha Kudu</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-600">Rich turmeric powder with a naturally bright color.</p>
+            </div>
+            <div class="rounded-[2rem] bg-white p-6 shadow-spice">
+              <p class="text-xs font-semibold uppercase tracking-[0.32em] text-spice-600">මිරිස් කුඩු · Chili · மிளகாய்</p>
+              <h3 class="mt-4 text-xl font-semibold text-slate-950">Miris Kudu</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-600">Bold chili powder for curries, sambols, and marinades.</p>
+            </div>
+            <div class="rounded-[2rem] bg-white p-6 shadow-spice">
+              <p class="text-xs font-semibold uppercase tracking-[0.32em] text-spice-600">ගම්මිරිස් කුඩු · Pepper · மிளகு</p>
+              <h3 class="mt-4 text-xl font-semibold text-slate-950">Gammiris Kudu</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-600">Aromatic black pepper for everyday seasoning.</p>
+            </div>
+            <div class="rounded-[2rem] bg-white p-6 shadow-spice">
+              <p class="text-xs font-semibold uppercase tracking-[0.32em] text-spice-600">Elegant display</p>
+              <h3 class="mt-4 text-xl font-semibold text-slate-950">Premium styling</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-600">Images and layout that feel more like a premium brand shop than a small page.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-16 grid gap-8 lg:grid-cols-3">
+          <article class="rounded-[2rem] bg-white shadow-spice overflow-hidden">
+            <img src="images/download.jpeg" alt="Turmeric powder in a bowl" class="h-80 w-full object-cover" />
+            <div class="p-8">
+              <p class="text-xs font-semibold uppercase tracking-[0.32em] text-spice-600">කහ කුඩු · Turmeric · மஞ்சள்</p>
+              <h3 class="mt-4 text-2xl font-semibold text-slate-950">Kaha Kudu</h3>
+              <p class="mt-4 text-sm leading-6 text-slate-600">Pure golden turmeric for curries, rice, and herbal blends.</p>
+              <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <span class="text-lg font-semibold text-slate-950" data-price-key="Kaha Kudu">100g / LKR 650</span>
+                <button class="btn cart-btn rounded-full bg-spice-600 px-5 py-3 text-sm font-semibold text-white hover:bg-spice-700 transition">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+          <article class="rounded-[2rem] bg-white shadow-spice overflow-hidden">
+            <img src="images/ceylone.lk_miris-kudu.jpg" alt="Chili powder on wooden spoon" class="h-80 w-full object-cover" />
+            <div class="p-8">
+              <p class="text-xs font-semibold uppercase tracking-[0.32em] text-spice-600">මිරිස් කුඩු · Chili · மிளகாய்</p>
+              <h3 class="mt-4 text-2xl font-semibold text-slate-950">Miris Kudu</h3>
+              <p class="mt-4 text-sm leading-6 text-slate-600">Rich red chili powder perfect for curry blends and sambols.</p>
+              <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <span class="text-lg font-semibold text-slate-950" data-price-key="Miris Kudu">100g / LKR 720</span>
+                <button class="btn cart-btn rounded-full bg-spice-600 px-5 py-3 text-sm font-semibold text-white hover:bg-spice-700 transition">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+          <article class="rounded-[2rem] bg-white shadow-spice overflow-hidden">
+            <img src="images/Se51172cdbd0443438a00f2949aeb118fl.jpg" alt="Black peppercorns and spice scoop" class="h-80 w-full object-cover" />
+            <div class="p-8">
+              <p class="text-xs font-semibold uppercase tracking-[0.32em] text-spice-600">ගම්මිරිස් කුඩු · Pepper · மிளகு</p>
+              <h3 class="mt-4 text-2xl font-semibold text-slate-950">Gammiris Kudu</h3>
+              <p class="mt-4 text-sm leading-6 text-slate-600">Sharp black pepper with authentic island aroma.</p>
+              <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <span class="text-lg font-semibold text-slate-950" data-price-key="Gammiris Kudu">100g / LKR 780</span>
+                <button class="btn cart-btn rounded-full bg-spice-600 px-5 py-3 text-sm font-semibold text-white hover:bg-spice-700 transition">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200 bg-white/80">
+      <div class="mx-auto max-w-7xl px-6 py-6 text-center text-sm text-slate-600">© 2026 Sri Lanka Spice Co. | Crafted with local pride</div>
+    </footer>
+
+    <nav class="sticky bottom-0 z-40 bg-white/95 border-t border-slate-200 md:hidden">
+      <div class="mx-auto max-w-7xl px-6 grid grid-cols-3">
+        <a href="index.html" class="border-r border-slate-200 py-3 text-center text-sm font-semibold text-slate-600">Home</a>
+        <a href="spices.html" class="border-r border-slate-200 py-3 text-center text-sm font-semibold text-spice-700">Shop</a>
+        <a href="contact.html" class="py-3 text-center text-sm font-semibold text-slate-600">Contact</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="hidden fixed inset-0 bg-black/40 z-50 flex items-end md:items-center md:justify-end">
+    <div class="w-full md:w-96 bg-white rounded-t-[2rem] md:rounded-[2rem] shadow-2xl max-h-96 flex flex-col">
+      <div class="flex items-center justify-between p-6 border-b border-slate-200">
+        <h2 class="text-2xl font-serif font-semibold text-slate-950">Your Cart</h2>
+        <button id="closeCart" class="text-slate-400 hover:text-slate-600 text-2xl">✕</button>
+      </div>
+      <div id="cartItems" class="flex-1 overflow-y-auto p-6">
+        <p class="text-center text-slate-500 py-8">Your cart is empty</p>
+      </div>
+      <div class="border-t border-slate-200 p-6">
+        <p id="cartTotal" class="text-lg font-semibold text-slate-950 mb-4">Total: LKR 0</p>
+        <button class="w-full bg-spice-600 text-white font-semibold py-3 rounded-full hover:bg-spice-700 transition">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
