@@ -1,0 +1,19 @@
+{
+  "spices": [
+    {
+      "name": "Kaha Kudu",
+      "size": "100g",
+      "price": 650
+    },
+    {
+      "name": "Miris Kudu",
+      "size": "100g",
+      "price": 720
+    },
+    {
+      "name": "Gammiris Kudu",
+      "size": "100g",
+      "price": 780
+    }
+  ]
+}
